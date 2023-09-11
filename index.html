@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="todo_container">
+      <h1>todo app</h1>
+      <div class="todo_list">
+        <header>
+          <div class="input_field">
+            <form action="">
+              <textarea
+                name="todo"
+                id="todo_text"
+                placeholder="Add a new Todo..."
+                required
+              ></textarea>
+            </form>
+          </div>
+          <button class="add_btn" title="Add Todo Task">Add Todo</button>
+        </header>
+        <small class="error">pls enter the message field</small>
+        <div class="task_container"></div>
+
+        <footer>
+          <div class="task_add_complete">
+            <span>your tash <span class="count"></span> added</span>
+          </div>
+          <button class="clearbtn" title="ClearTask">clear all</button>
+        </footer>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

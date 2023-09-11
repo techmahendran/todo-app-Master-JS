@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: lightgreen;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h1 {
+  text-align: center;
+  text-transform: capitalize;
+  color: #3030e1;
+  font-size: 3rem;
+}
+.todo_list {
+  width: 450px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 5px;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.todo_list::-webkit-scrollbar {
+  width: 5px;
+  border: 1px solid #d5d5d5;
+}
+
+.todo_list::-webkit-scrollbar-track {
+  border-radius: 0;
+  background: #fcfafa;
+}
+
+.todo_list::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background: #b0b0b0;
+}
+.todo_list::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+.input_field {
+  position: relative;
+  width: 78%;
+}
+.input_field textarea {
+  width: 100%;
+  height: 45px;
+  outline: none;
+  resize: none;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+.input_field textarea::-webkit-scrollbar {
+  width: auto;
+}
+.input_field i {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+}
+.add_btn {
+  border: none;
+  background-color: rgb(137 137 224) !important;
+  padding: 10px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+.add_btn.active {
+  background-color: blue !important;
+}
+small.error {
+  text-align: center;
+  display: block;
+  background-color: red;
+  padding: 5px;
+  color: #fff;
+  border-radius: 5px;
+  text-transform: capitalize;
+  display: none;
+}
+small.error.active {
+  display: block;
+}
+.complete_msg {
+  text-align: center;
+  padding: 5px;
+  background-color: lightcoral;
+  border-radius: 5px;
+  color: #fff;
+  display: none;
+}
+.complete_msg.show {
+  display: block;
+}
+.task_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.task {
+  border-bottom: 1px solid #ddd;
+  width: 92%;
+  user-select: none;
+}
+.task label {
+  display: flex;
+  justify-content: flex-start;
+}
+.task input {
+  margin: 5px 8px 0px 0px;
+  outline: none;
+  width: 15px;
+}
+.task p {
+  margin-bottom: 10px;
+  font-size: 17px;
+  word-break: break-all;
+}
+.checked {
+  text-decoration: line-through;
+}
+.delbtn {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 5px;
+  outline: none;
+  font-size: 15px;
+  transition: 0.3s all ease;
+}
+
+.delbtn:hover {
+  background-color: #aba5a53d;
+  border-radius: 5px;
+  color: red;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+}
+/* footer .task_add_complete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  width: 200px;
+} */
+/* .task_add_complete span:nth-child(2) {
+  display: inline-block;
+  margin-left: 10px;
+} */
+footer span {
+  text-transform: capitalize;
+}
+/* .count.active {
+  color: rgb(8, 235, 8);
+} */
+.clearbtn {
+  border: none;
+  padding: 10px;
+  background-color: rgb(137 137 224);
+  cursor: pointer;
+  border-radius: 6px;
+  color: #fff;
+  text-transform: capitalize;
+  outline: none;
+}
+.clearbtn.active {
+  background-color: blue;
+}
+@media (max-width: 768px) {
+  .todo_list {
+    width: 385px;
+    padding: 1.5rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .input_field textarea {
+    padding: 8px 12px;
+    height: 42px;
+  }
+  .input_field {
+    margin-right: 8px;
+  }
+  .add_btn {
+    white-space: nowrap;
+  }
+  .clearbtn {
+    padding: 8px;
+  }
+}
+@media (max-width: 500px) {
+  .todo_list {
+    width: 310px;
+    padding: 1.2rem;
+  }
+
+  .input_field textarea {
+    padding: 8px 8px;
+    height: 40px;
+  }
+  .input_field textarea::placeholder {
+    font-size: 16px;
+  }
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .add_btn {
+    padding: 6px;
+    margin-top: 5px;
+  }
+  .task input {
+    width: auto;
+  }
+  .task label {
+    width: 248px;
+  }
+  .delbtn {
+    font-size: 14px;
+  }
+  .clearbtn {
+    padding: 6px;
+  }
+}
